@@ -71,7 +71,8 @@ def validate_request(request, schema):
             source_type = node_map[predicate['source']]['type']
             target_type = node_map[predicate['target']]['type']
 
-            predicate_type = f'{source_type}_{predicate_type}_{target_type}'
+            predicate_type = f'{source_type}-{predicate_type}-{target_type}'
+            print("validator 75", predicate_type)
             if predicate_type not in schema:
                 raise Exception(f"Invalid source and target for the predicate {predicate['type']}")
 

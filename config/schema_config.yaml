@@ -179,7 +179,7 @@ structural variant:
       variant_type: str
       evidence: str
 
-      variant_subtype: str
+sequence variant:
   represented_as: node
   input_label: sequence_variant
   is_a: genomic variant
@@ -632,7 +632,7 @@ go rna:
   represented_as: edge
   input_label: go_rna
   output_label: belongs_to
-  source: non_coding_rna
+  source: non coding rna
   target: go
 
 # ---
@@ -674,7 +674,7 @@ super enhancer to gene association:
   represented_as: edge
   input_label: super_enhancer_gene
   output_label: associated_with
-  source: super_enhancer
+  source: super enhancer
   target: gene
   properties:
     score: float

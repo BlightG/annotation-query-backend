@@ -32,7 +32,7 @@ class SchemaManager:
             for i_label in labels:
                 for s in sources:
                     for t in targets:
-                        key_label = f'{s}_{i_label}_{t}' if s and t else i_label
+                        key_label = f'{s}-{i_label}-{t}' if s and t else i_label
                         process_schema[key_label] = {**value, "key": key_label}
 
         return process_schema

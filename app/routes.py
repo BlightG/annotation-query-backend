@@ -70,6 +70,7 @@ def get_relations_for_node_endpoint(current_user_id, node_label):
 @app.route('/query', methods=['POST'])
 @token_required
 def process_query(current_user_id):
+    print("PROCESSING REQUEST")
     data = request.get_json()
     if not data or 'requests' not in data:
         return jsonify({"error": "Missing requests data"}), 400
@@ -114,6 +115,7 @@ def process_query(current_user_id):
 
         # Generate the query code
         query_code = db_instance.query_Generator(requests, node_map, limit, node_only)
+        print(118, query_code)
         return query_code
         
         
@@ -145,6 +147,7 @@ def process_query(current_user_id):
         else:
             existing_query = None
 
+        print(response_data)
         if existing_query is None:
             title = llm.generate_title(query_code)
 
