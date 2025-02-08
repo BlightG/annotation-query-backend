@@ -1,0 +1,367 @@
+# input: [
+#           (, 
+                # (node gene_name (gene ENSG00000101349) PAK5) 
+                # (node gene_type (gene ENSG00000101349) protein_coding) 
+                # (node synonyms (gene ENSG00000101349) 
+                # (p21CDKN1A-activated_kinase_7 PAK7 p21-activated_kinase_5 serine/threonine-protein_kinase_PAK7 PAK-7 serine/threonine-protein_kinase_PAK_7 p21_(RAC1)_activated_kinase_7 p21-activated_kinase_7 p21_protein_(Cdc42/Rac)-activated_kinase_7 protein_kinase_PAK5 serine/threonine-protein_kinase_PAK_5 p21_(RAC1)_activated_kinase_5 p21(CDKN1A)-activated_kinase_7 PAK5 PAK-5 HGNC:15916)) 
+                # (node source (gene ENSG00000101349) GENCODE) 
+                # (node source_url (gene ENSG00000101349) https://www.gencodegenes.org/human/)
+                #  (node chr (gene ENSG00000101349) chr20) 
+                # (node start (gene ENSG00000101349) 9537370) 
+                # (node end (gene ENSG00000101349) 9839076)
+        #  )]
+
+# result: [[{'data': 
+            # {
+            # 'id': 'gene ENSG00000101349',
+            #  'type': 'gene', 
+            # 'gene_name': 'PAK5', 
+            # 'gene_type': 'protein_coding',
+            #  'source': 'GENCODE',
+            #  'source_url': 'https://www.gencodegenes.org/human/',
+            #  'chr': 'chr20', 
+            # 'start': '9537370', 
+            # 'end': '9839076'}}], []]
+
+# input: [
+(, 
+            (node gene_name (gene ENSG00000101349) PAK5)
+            (node gene_type (gene ENSG00000101349) protein_coding)
+            (node synonyms (gene ENSG00000101349) (p21CDKN1A-activated_kinase_7 PAK7 p21-activated_kinase_5 serine/threonine-protein_kinase_PAK7 PAK-7 serine/threonine-protein_kinase_PAK_7 p21_(RAC1)_activated_kinase_7 p21-activated_kinase_7 p21_protein_(Cdc42/Rac)-activated_kinase_7 protein_kinase_PAK5 serine/threonine-protein_kinase_PAK_5 p21_(RAC1)_activated_kinase_5 p21(CDKN1A)-activated_kinase_7 PAK5 PAK-5 HGNC:15916)) 
+            (node source (gene ENSG00000101349) GENCODE) 
+            (node source_url (gene ENSG00000101349) https://www.gencodegenes.org/human/) 
+            (node chr (gene ENSG00000101349) chr20) 
+            (node start (gene ENSG00000101349) 9537370)
+            (node end (gene ENSG00000101349) 9839076)
+            (node gene_name (gene ENSG00000286740) ENSG00000286740) 
+            (node gene_type (gene ENSG00000286740) lncRNA)
+            (node synonyms (gene ENSG00000286740) (p21CDKN1A-activated_kinase_7 PAK7 p21-activated_kinase_5 serine/threonine-protein_kinase_PAK7 PAK-7 serine/threonine-protein_kinase_PAK_7 p21_(RAC1)_activated_kinase_7 p21-activated_kinase_7 p21_protein_(Cdc42/Rac)-activated_kinase_7 protein_kinase_PAK5 serine/threonine-protein_kinase_PAK_5 p21_(RAC1)_activated_kinase_5 p21(CDKN1A)-activated_kinase_7 PAK5 PAK-5 HGNC:15916))
+            (node source (gene ENSG00000286740) GENCODE) 
+            (node source_url (gene ENSG00000286740) https://www.gencodegenes.org/human/) 
+            (node chr (gene ENSG00000286740) chr20) 
+            (node start (gene ENSG00000286740) 9562941) 
+            (node end (gene ENSG00000286740) 9571257)
+)]
+
+# tuples:  [
+#           ('node', 'gene_name', 'gene', 'ENSG00000101349', 'PAK5'),
+#           ('node', 'gene_type', 'gene', 'ENSG00000101349', 'protein_coding'), 
+#           ('node', 'synonyms', 'gene', 'ENSG00000101349', 'p21CDKN1A-activated_kinase_7', 'PAK7', 'p21-activated_kinase_5', 'serine/threonine-protein_kinase_PAK7', 'PAK-7', 'serine/threonine-protein_kinase_PAK_7', 'p21_(RAC1)_activated_kinase_7', 'p21-activated_kinase_7', 'p21_protein_(Cdc42/Rac)-activated_kinase_7', 'protein_kinase_PAK5', 'serine/threonine-protein_kinase_PAK_5', 'p21_(RAC1)_activated_kinase_5', 'p21(CDKN1A)-activated_kinase_7', 'PAK5', 'PAK-5', 'HGNC:15916'), 
+#           ('node', 'source', 'gene', 'ENSG00000101349', 'GENCODE'),
+#           ('node', 'source_url', 'gene', 'ENSG00000101349', 'https://www.gencodegenes.org/human/'), 
+#           ('node', 'chr', 'gene', 'ENSG00000101349', 'chr20'), 
+#           ('node', 'start', 'gene', 'ENSG00000101349', '9537370'),
+#           ('node', 'end', 'gene', 'ENSG00000101349', '9839076'),
+#           ('node', 'gene_name', 'gene', 'ENSG00000286740', 'ENSG00000286740'), 
+#           ('node', 'gene_type', 'gene', 'ENSG00000286740', 'lncRNA'), 
+#           ('node', 'synonyms', 'gene', 'ENSG00000286740', 'p21CDKN1A-activated_kinase_7', 'PAK7', 'p21-activated_kinase_5', 'serine/threonine-protein_kinase_PAK7', 'PAK-7', 'serine/threonine-protein_kinase_PAK_7', 'p21_(RAC1)_activated_kinase_7', 'p21-activated_kinase_7', 'p21_protein_(Cdc42/Rac)-activated_kinase_7', 'protein_kinase_PAK5', 'serine/threonine-protein_kinase_PAK_5', 'p21_(RAC1)_activated_kinase_5', 'p21(CDKN1A)-activated_kinase_7', 'PAK5', 'PAK-5', 'HGNC:15916'), 
+#           ('node', 'source', 'gene', 'ENSG00000286740', 'GENCODE'),
+#           ('node', 'source_url', 'gene', 'ENSG00000286740', 'https://www.gencodegenes.org/human/'), 
+#           ('node', 'chr', 'gene', 'ENSG00000286740', 'chr20'), 
+#           ('node', 'start', 'gene', 'ENSG00000286740', '9562941'), 
+#           ('node', 'end', 'gene', 'ENSG00000286740', '9571257')]
+
+# result: [[{'data': 
+#               {
+#                   'id': 'gene ENSG00000101349', 
+                    # 'type': 'gene', 
+                    # 'gene_name': 'PAK5', 
+                    # 'gene_type': 'protein_coding', 
+                    # 'source': 'GENCODE', 
+                    # 'source_url': 'https://www.gencodegenes.org/human/', 
+                    # 'chr': 'chr20', 
+                    # 'start': '9537370', 
+                    # 'end': '9839076'}}, 
+                    # {'data': 
+                    # {
+                    # 'id': 'gene ENSG00000286740', 
+                    # 'type': 'gene', 
+                    # 'gene_name': 'ENSG00000286740', 
+                    # 'gene_type': 'lncRNA', 
+                    # 'source': 'GENCODE', 
+                    # 'source_url': 'https://www.gencodegenes.org/human/', 
+                    # 'chr': 'chr20', 
+                    # 'start': '9562941', 
+                    # 'end': '9571257'}}], 
+                    # []]
+
+Edge
+query: !(match &space 
+(, 
+        (gene_name (gene ENSG00000101349) $46619678) 
+        (gene_type (gene ENSG00000101349) $5645e0c3) 
+        (synonyms (gene ENSG00000101349) $a0c7e9eb) 
+        (source (gene ENSG00000101349) $2df2070a) 
+        (source_url (gene ENSG00000101349) $755db27b) 
+        (chr (gene ENSG00000101349) $cf8ea4b9) 
+        (start (gene ENSG00000101349) $f0c1d6b3) 
+        (end (gene ENSG00000101349) $7b5b9d3c) 
+        (gene_name (transcript ENST00000353224) $70ca72ae) 
+        (transcript_name (transcript ENST00000353224) $d0a15708) 
+        (transcript_id (transcript ENST00000353224) $68691956) 
+        (transcript_type (transcript ENST00000353224) $b1b87a4c) 
+        (source (transcript ENST00000353224) $351ce1d0) 
+        (source_url (transcript ENST00000353224) $269b5169) 
+        (chr (transcript ENST00000353224) $b427c0f7) 
+        (start (transcript ENST00000353224) $f08e8841) 
+        (end (transcript ENST00000353224) $8b7c039e) 
+        (source (transcribed_to (gene ENSG00000101349) (transcript ENST00000353224)) $075e41f4) 
+        (source_url (transcribed_to (gene ENSG00000101349) (transcript ENST00000353224)) $102fb147) )  
+(, 
+        (node gene_name (gene ENSG00000101349) $46619678) 
+        (node gene_type (gene ENSG00000101349) $5645e0c3) 
+        (node synonyms (gene ENSG00000101349) $a0c7e9eb) 
+        (node source (gene ENSG00000101349) $2df2070a) 
+        (node source_url (gene ENSG00000101349) $755db27b) 
+        (node chr (gene ENSG00000101349) $cf8ea4b9) 
+        (node start (gene ENSG00000101349) $f0c1d6b3) 
+        (node end (gene ENSG00000101349) $7b5b9d3c) 
+        (node gene_name (transcript ENST00000353224) $70ca72ae) 
+        (node transcript_name (transcript ENST00000353224) $d0a15708) 
+        (node transcript_id (transcript ENST00000353224) $68691956) 
+        (node transcript_type (transcript ENST00000353224) $b1b87a4c) 
+        (node source (transcript ENST00000353224) $351ce1d0) 
+        (node source_url (transcript ENST00000353224) $269b5169) 
+        (node chr (transcript ENST00000353224) $b427c0f7) 
+        (node start (transcript ENST00000353224) $f08e8841) 
+        (node end (transcript ENST00000353224) $8b7c039e) 
+        (edge source (transcribed_to (gene ENSG00000101349) (transcript ENST00000353224)) $075e41f4) 
+        (edge source_url (transcribed_to (gene ENSG00000101349) (transcript ENST00000353224)) $102fb147))
+)
+ 
+input: [
+(, 
+        (node gene_name (gene ENSG00000101349) PAK5) 
+        (node gene_type (gene ENSG00000101349) protein_coding) 
+        (node synonyms (gene ENSG00000101349) (p21CDKN1A-activated_kinase_7 PAK7 p21-activated_kinase_5 serine/threonine-protein_kinase_PAK7 PAK-7 serine/threonine-protein_kinase_PAK_7 p21_(RAC1)_activated_kinase_7 p21-activated_kinase_7 p21_protein_(Cdc42/Rac)-activated_kinase_7 protein_kinase_PAK5 serine/threonine-protein_kinase_PAK_5 p21_(RAC1)_activated_kinase_5 p21(CDKN1A)-activated_kinase_7 PAK5 PAK-5 HGNC:15916)) 
+        (node source (gene ENSG00000101349) GENCODE) 
+        (node source_url (gene ENSG00000101349) https://www.gencodegenes.org/human/) 
+        (node chr (gene ENSG00000101349) chr20) (node start (gene ENSG00000101349) 9537370)
+        (node end (gene ENSG00000101349) 9839076) 
+        (node gene_name (transcript ENST00000353224) PAK5) 
+        (node transcript_name (transcript ENST00000353224) PAK5-201) 
+        (node transcript_id (transcript ENST00000353224) ENST00000353224.10) 
+        (node transcript_type (transcript ENST00000353224) protein_coding) 
+        (node source (transcript ENST00000353224) GENCODE) 
+        (node source_url (transcript ENST00000353224) https://www.gencodegenes.org/human/) 
+        (node chr (transcript ENST00000353224) chr20) 
+        (node start (transcript ENST00000353224) 9537370) 
+        (node end (transcript ENST00000353224) 9839076) 
+        (edge source (transcribed_to (gene ENSG00000101349) (transcript ENST00000353224)) GENCODE) 
+        (edge source_url (transcribed_to (gene ENSG00000101349) (transcript ENST00000353224)) https://www.gencodegenes.org/human/) 
+        (edge source (transcribed_to (gene ENSG00000101349) (transcript ENST00000353224)) GENCODE) 
+        (edge source_url (transcribed_to (gene ENSG00000101349) (transcript ENST00000353224)) https://www.gencodegenes.org/human/)
+)]
+
+tuples: [
+        ('node', 'gene_name', 'gene', 'ENSG00000101349', 'PAK5'), 
+        ('node', 'gene_type', 'gene', 'ENSG00000101349', 'protein_coding'), 
+        ('node', 'synonyms', 'gene', 'ENSG00000101349', 'p21CDKN1A-activated_kinase_7', 'PAK7', 'p21-activated_kinase_5', 'serine/threonine-protein_kinase_PAK7', 'PAK-7', 'serine/threonine-protein_kinase_PAK_7', 'p21_(RAC1)_activated_kinase_7', 'p21-activated_kinase_7', 'p21_protein_(Cdc42/Rac)-activated_kinase_7', 'protein_kinase_PAK5', 'serine/threonine-protein_kinase_PAK_5', 'p21_(RAC1)_activated_kinase_5', 'p21(CDKN1A)-activated_kinase_7', 'PAK5', 'PAK-5', 'HGNC:15916'), 
+        ('node', 'source', 'gene', 'ENSG00000101349', 'GENCODE'), 
+        ('node', 'source_url', 'gene', 'ENSG00000101349', 'https://www.gencodegenes.org/human/'), 
+        ('node', 'chr', 'gene', 'ENSG00000101349', 'chr20'), 
+        ('node', 'start', 'gene', 'ENSG00000101349', '9537370'), 
+        ('node', 'end', 'gene', 'ENSG00000101349', '9839076'), 
+        ('node', 'gene_name', 'transcript', 'ENST00000353224', 'PAK5'), 
+        ('node', 'transcript_name', 'transcript', 'ENST00000353224', 'PAK5-201'), 
+        ('node', 'transcript_id', 'transcript', 'ENST00000353224', 'ENST00000353224.10'), 
+        ('node', 'transcript_type', 'transcript', 'ENST00000353224', 'protein_coding'), 
+        ('node', 'source', 'transcript', 'ENST00000353224', 'GENCODE'), 
+        ('node', 'source_url', 'transcript', 'ENST00000353224', 'https://www.gencodegenes.org/human/'), 
+        ('node', 'chr', 'transcript', 'ENST00000353224', 'chr20'), 
+        ('node', 'start', 'transcript', 'ENST00000353224', '9537370'), 
+        ('node', 'end', 'transcript', 'ENST00000353224', '9839076'), 
+        ('edge', 'source', 'transcribed_to', 'gene', 'ENSG00000101349', 'transcript', 'ENST00000353224', 'GENCODE'), 
+        ('edge', 'source_url', 'transcribed_to', 'gene', 'ENSG00000101349', 'transcript', 'ENST00000353224', 'https://www.gencodegenes.org/human/'), 
+        ('edge', 'source', 'transcribed_to', 'gene', 'ENSG00000101349', 'transcript', 'ENST00000353224', 'GENCODE'), 
+        ('edge', 'source_url', 'transcribed_to', 'gene', 'ENSG00000101349', 'transcript', 'ENST00000353224', 'https://www.gencodegenes.org/human/')]
+
+result: [
+[
+        {'data': 
+                {
+                        'id': 'gene ENSG00000101349', 
+                        'type': 'gene', 
+                        'gene_name': 'PAK5', 
+                        'gene_type': 'protein_coding', 
+                        'source': 'GENCODE', 
+                        'source_url': 'https://www.gencodegenes.org/human/', 
+                        'chr': 'chr20', 
+                        'start': '9537370', 
+                        'end': '9839076'
+                }
+        },
+        {'data': 
+                {
+                        'id': 'transcript ENST00000353224',
+                        'type': 'transcript', 
+                        'gene_name': 'PAK5',
+                        'transcript_name': 'PAK5-201',
+                        'transcript_id': 'ENST00000353224.10',
+                        'transcript_type': 'protein_coding',
+                        'source': 'GENCODE',
+                        'source_url': 'https://www.gencodegenes.org/human/',
+                        'chr': 'chr20',
+                        'start': '9537370',
+                        'end': '9839076'
+                }
+        }
+],
+[
+        {'data': 
+                {
+                        'label': 'transcribed_to', 
+                        'source': 'gene ENSG00000101349', 
+                        'target': 'transcript ENST00000353224',
+                        'source_data': 'GENCODE',
+                        'source_url': 'https://www.gencodegenes.org/human/'
+                }
+        }
+]]
+
+query: !(match &space 
+(, 
+        (gene_name (transcript ENST00000353703) $d9b863b8) 
+        (transcript_name (transcript ENST00000353703) $bbea79a3) 
+        (transcript_id (transcript ENST00000353703) $69ecad3d) 
+        (transcript_type (transcript ENST00000353703) $73fc1f37) 
+        (source (transcript ENST00000353703) $ba38d327) 
+        (source_url (transcript ENST00000353703) $26505cd0) 
+        (chr (transcript ENST00000353703) $7c319406) 
+        (start (transcript ENST00000353703) $378863fa) 
+        (end (transcript ENST00000353703) $cc85f655) 
+        (accessions (protein P31946) $82b7e3bb) 
+        (protein_name (protein P31946) $f11acaad) 
+        (synonyms (protein P31946) $8d047203) 
+        (source (protein P31946) $05ec851e) 
+        (source_url (protein P31946) $beb0bfdb) 
+        (source (translates_to (transcript ENST00000353703) (protein P31946)) $c85a4d95) 
+        (source_url (translates_to (transcript ENST00000353703) (protein P31946)) $67aa92a7) 
+        (gene_name (gene ENSG00000166913) $d3f1f0a2) 
+        (gene_type (gene ENSG00000166913) $1794aaa6) 
+        (synonyms (gene ENSG00000166913) $b8e86c3f) 
+        (source (gene ENSG00000166913) $f1292c12) 
+        (source_url (gene ENSG00000166913) $48ec1f6e) 
+        (chr (gene ENSG00000166913) $162eaa51) 
+        (start (gene ENSG00000166913) $c3db3a19) 
+        (end (gene ENSG00000166913) $d6d178d4) 
+        (source (transcribed_to (gene ENSG00000166913) (transcript ENST00000353703)) $95314793) 
+        (source_url (transcribed_to (gene ENSG00000166913) (transcript ENST00000353703)) $adf1ebf2) 
+)  
+(, 
+        (node gene_name (transcript ENST00000353703) $d9b863b8) 
+        (node transcript_name (transcript ENST00000353703) $bbea79a3) 
+        (node transcript_id (transcript ENST00000353703) $69ecad3d) 
+        (node transcript_type (transcript ENST00000353703) $73fc1f37) 
+        (node source (transcript ENST00000353703) $ba38d327) 
+        (node source_url (transcript ENST00000353703) $26505cd0) 
+        (node chr (transcript ENST00000353703) $7c319406) 
+        (node start (transcript ENST00000353703) $378863fa) 
+        (node end (transcript ENST00000353703) $cc85f655) 
+        (node accessions (protein P31946) $82b7e3bb) 
+        (node protein_name (protein P31946) $f11acaad) 
+        (node synonyms (protein P31946) $8d047203) 
+        (node source (protein P31946) $05ec851e) 
+        (node source_url (protein P31946) $beb0bfdb) 
+        (edge source (translates_to (transcript ENST00000353703) (protein P31946)) $c85a4d95) 
+        (edge source_url (translates_to (transcript ENST00000353703) (protein P31946)) $67aa92a7) 
+        (node gene_name (gene ENSG00000166913) $d3f1f0a2) (node gene_type (gene ENSG00000166913) $1794aaa6) 
+        (node synonyms (gene ENSG00000166913) $b8e86c3f) (node source (gene ENSG00000166913) $f1292c12) 
+        (node source_url (gene ENSG00000166913) $48ec1f6e) (node chr (gene ENSG00000166913) $162eaa51) 
+        (node start (gene ENSG00000166913) $c3db3a19) (node end (gene ENSG00000166913) $d6d178d4) 
+        (edge source (transcribed_to (gene ENSG00000166913) (transcript ENST00000353703)) $95314793) 
+        (edge source_url (transcribed_to (gene ENSG00000166913) (transcript ENST00000353703)) $adf1ebf2)
+))
+
+result: [{
+                'predicate': 'transcribed_to', 
+                'source': 'gene ENSG00000101349', 
+                'target': 'transcript ENST00000353224'
+        }]
+
+metta: !(match &space 
+(, 
+        (gene_name (gene ENSG00000101349) $5c877ae0) 
+        (gene_type (gene ENSG00000101349) $8b65b254) 
+        (synonyms (gene ENSG00000101349) $3473f62c) 
+        (source (gene ENSG00000101349) $484acb90) 
+        (source_url (gene ENSG00000101349) $ff4184a3) 
+        (chr (gene ENSG00000101349) $11124d2d) 
+        (start (gene ENSG00000101349) $9746cff8) 
+        (end (gene ENSG00000101349) $8c058d18) 
+        (gene_name (transcript ENST00000353224) $d905f4a8) 
+        (transcript_name (transcript ENST00000353224) $ee3179f4) 
+        (transcript_id (transcript ENST00000353224) $7b9e5af3) 
+        (transcript_type (transcript ENST00000353224) $1de3fe25) 
+        (source (transcript ENST00000353224) $bed815e3) 
+        (source_url (transcript ENST00000353224) $bbbbc0e1) 
+        (chr (transcript ENST00000353224) $e15b9d18) 
+        (start (transcript ENST00000353224) $227a82f1) 
+        (end (transcript ENST00000353224) $5133555c) 
+        (source (transcribed_to (gene ENSG00000101349) 
+        (transcript ENST00000353224)) $a127142c) 
+        (source_url (transcribed_to (gene ENSG00000101349) (transcript ENST00000353224)) $cf7d4a31) 
+)  
+(, 
+        (node gene_name (gene ENSG00000101349) $5c877ae0) 
+        (node gene_type (gene ENSG00000101349) $8b65b254) 
+        (node synonyms (gene ENSG00000101349) $3473f62c) 
+        (node source (gene ENSG00000101349) $484acb90) 
+        (node source_url (gene ENSG00000101349) $ff4184a3) 
+        (node chr (gene ENSG00000101349) $11124d2d) 
+        (node start (gene ENSG00000101349) $9746cff8) 
+        (node end (gene ENSG00000101349) $8c058d18) 
+        (node gene_name (transcript ENST00000353224) $d905f4a8) 
+        (node transcript_name (transcript ENST00000353224) $ee3179f4) 
+        (node transcript_id (transcript ENST00000353224) $7b9e5af3) 
+        (node transcript_type (transcript ENST00000353224) $1de3fe25) 
+        (node source (transcript ENST00000353224) $bed815e3) 
+        (node source_url (transcript ENST00000353224) $bbbbc0e1) 
+        (node chr (transcript ENST00000353224) $e15b9d18) 
+        (node start (transcript ENST00000353224) $227a82f1) 
+        (node end (transcript ENST00000353224) $5133555c) 
+        (edge source (transcribed_to (gene ENSG00000101349) (transcript ENST00000353224)) $a127142c) 
+        (edge source_url (transcribed_to (gene ENSG00000101349) (transcript ENST00000353224)) $cf7d4a31)
+))
+
+ ((, 
+        (gene_name (gene ENSG00000101349) $e200504c)
+        (gene_type (gene ENSG00000101349) $0340bff9) 
+        (synonyms (gene ENSG00000101349) $3de911d4)
+        (source (gene ENSG00000101349) $c0ab3102)  
+        (source_url (gene ENSG00000101349) $29fbaef1) 
+        (chr (gene ENSG00000101349) $944ebf59) 
+        (start (gene ENSG00000101349) $0c47dfc6)
+        (end (gene ENSG00000101349) $34a07c10)
+        (gene_name (transcript ENST00000353224) $6c37642e)
+        (transcript_name (transcript ENST00000353224) $3b63d6c9) 
+        (transcript_id (transcript ENST00000353224) $b24ee37f) 
+        (transcript_type (transcript ENST00000353224) $1be87701) 
+        (source (transcript ENST00000353224) $989c4c59) 
+        (source_url (transcript ENST00000353224) $03981196) 
+        (chr (transcript ENST00000353224) $7e8e2400) 
+        (start (transcript ENST00000353224) $ff243056) 
+        (end (transcript ENST00000353224) $5b67fa3c) 
+        (source (transcribed_to (gene ENSG00000101349) (transcript ENST00000353224)) $aee80413) 
+        (source_url (transcribed_to (gene ENSG00000101349) (transcript ENST00000353224)) $c17f466e) )  
+(, 
+        (node gene_name (gene ENSG00000101349) $e200504c) 
+        (node gene_type (gene ENSG00000101349) $0340bff9) 
+        (node synonyms (gene ENSG00000101349) $3de911d4) 
+        (node source (gene ENSG00000101349) $c0ab3102) 
+        (node source_url (gene ENSG00000101349) $29fbaef1) 
+        (node chr (gene ENSG00000101349) $944ebf59) 
+        (node start (gene ENSG00000101349) $0c47dfc6) 
+        (node end (gene ENSG00000101349) $34a07c10) 
+        (node gene_name (transcript ENST00000353224) $6c37642e) 
+        (node transcript_name (transcript ENST00000353224) $3b63d6c9) 
+        (node transcript_id (transcript ENST00000353224) $b24ee37f) 
+        (node transcript_type (transcript ENST00000353224) $1be87701) 
+        (node source (transcript ENST00000353224) $989c4c59) 
+        (node source_url (transcript ENST00000353224) $03981196) 
+        (node chr (transcript ENST00000353224) $7e8e2400) 
+        (node start (transcript ENST00000353224) $ff243056) 
+        (node end (transcript ENST00000353224) $5b67fa3c) 
+        (edge source (transcribed_to (gene ENSG00000101349) (transcript ENST00000353224)) $aee80413) 
+        (edge source_url (transcribed_to (gene ENSG00000101349) (transcript ENST00000353224)) $c17f466e)
+))

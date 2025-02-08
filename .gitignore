@@ -1,0 +1,16 @@
+biocypher-log/
+**/__pycache__/
+cypher_data/
+metta_data/
+.venv
+venv
+.env
+public
+myenv/
+output/
+*.swp
+gen_jwt.py
+dict.txt
+tags
+query.txt
+.vscode/
