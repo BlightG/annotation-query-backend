@@ -115,12 +115,14 @@ def process_query(current_user_id):
 
         # Generate the query code
         query_code = db_instance.query_Generator(requests, node_map, limit, node_only)
-        print(118, query_code)
+        print(118, len(query_code), '\n', query_code)
         return query_code
+        # return query_code
         
         
         # Run the query and parse the results
         result = db_instance.run_query(query_code, run_count)
+        print(124, result)
         graph_components = {"nodes": requests['nodes'], "predicates": 
                             requests['predicates'], "properties": properties}
         response_data = db_instance.parse_and_serialize(result, schema_manager.schema, graph_components)

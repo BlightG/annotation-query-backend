@@ -62,7 +62,8 @@ class CypherQueryGenerator(QueryGeneratorInterface):
         if isinstance(query_code, list):
             find_query = query_code[0]
             total_count_query = query_code[1]
-            label_count_query = query_code[2]
+            if len(query_code) == 3:
+                label_count_query = query_code[2]
         else:
             find_query = query_code
             total_count_query = None
@@ -520,7 +521,6 @@ class CypherQueryGenerator(QueryGeneratorInterface):
                 temp_properties_or = []
             
             where_clause = f"({' OR '.join(operands)})"  
-            label_count_query = f'''{match_no_clause} {where_no_clause} {return_clause}'''
 
         print(where_clause)
         print("return_or", returns)
